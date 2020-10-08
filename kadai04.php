@@ -19,13 +19,19 @@ echo sum(5, 9) . "\n";
 
 
 // 課題３
+$array = [1, 3, 5, 7, 9];
+
 function kadai03($arr) {
-    $array = [1, 3, 5, 7, 9];
-    $result3 = $arr * $array[0] * $array[1] * $array[2] * $array[3] * $array[4];
+    $result3 = $arr[0]; // $result = 0; としてしまうと、28行目が0に対する乗算となり、いつまでも積が0になる
+    
+    for ($i = 1; $i < count($arr); $i++) {
+        // 25行目で配列の１つ目の要素から始めたので、ここでは２つ目の要素から始める//
+        $result3 *= $arr[$i];
+    }
     return $result3;
 }
 
-echo kadai03(18) . "\n";
+echo kadai03($array) . "\n";
 
 
 // 課題４
