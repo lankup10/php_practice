@@ -70,7 +70,7 @@ print_r($array9);
 
 echo time() . "\n";
 
-$time = mktime(14,46,18,3,11,2011);
+$time = mktime(12,34,56,5,14,1988);
 var_dump(date('Y年m月d日h時i分s秒', $time));
 echo "\n";
 
