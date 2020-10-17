@@ -69,6 +69,10 @@ $array9 = array_merge($array6, $array7, $array8);
 print_r($array9);
 
 echo time() . "\n";
-echo mktime() . "\n";
+
+$time = mktime(14,46,18,3,11,2011);
+var_dump(date('Y年m月d日h時i分s秒', $time));
+echo "\n";
+
 echo date("Y/m/d H:i:s") . "\n";
 ?>
